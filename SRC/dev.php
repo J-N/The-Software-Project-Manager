@@ -13,7 +13,7 @@ foreach( $dev = myq("SELECT name FROM developers where id=$did") as $k=>$v)
 	$dname = $dev[$k]['name'];
 }
 
-startform("deletetask","POST","handle_task_del.php");
+startform("deletetask","POST","del_task.php");
 
 echo "$dname's Tasks: <br /> <table><tr><td></td><td>Task</td><td>Description</td><td>Feature</td><td>Milestone</td></tr>";
 
