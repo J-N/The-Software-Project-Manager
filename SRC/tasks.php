@@ -31,7 +31,12 @@ if (isset($t))
 	tbox("Feature","fname",$fname);
 	tbox("Description","desc",$desc);
 	tbox("Details","details",$details);
-
+	tbox("Expected Elapsed Time","eet",$eet);
+	echo"<select name='status'>
+	<option value='PENDING'>PENDING</option>
+	<option value='IN PROGRESS'>IN PROGRESS</option>
+	<option value='COMPLETED'>COMPLETED</option>
+	</select>";
 	hidden("id",$id);
 
 	stopform("Modifify Task");
