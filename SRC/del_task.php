@@ -17,9 +17,10 @@ if (!empty($t))
 	
 	startform("deltask","POST","handle_rem_task.php");
 	
-	$single_value = implode(“,”, $t);
-	echo $single_value;
-	hidden("id",$single_value);
+foreach ($t as $key => $value)
+{
+ echo ‘<input type=hidden name=”my_array[]” value=”‘.htmlspecialchars($value).’”>’;
+}
 
 	stopform("Yes");
 	

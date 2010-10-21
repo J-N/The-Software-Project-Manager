@@ -3,13 +3,12 @@
 include ('config.php');
 include ('custom_functions.php');
 
-$t = $_POST['id'];
+$t = $_POST['my_array'];
 
-$p = explode(“,”,$_POST['id']);
 echo $t;
-	for($i=0; $i < count($p); $i++)
+	for($i=0; $i < count($t); $i++)
     {
-		$k = $p[$i];
+		$k = $t[$i];
 	
 		$f = myq("select * from tasks where id=$k");
 		$mname = $f[0]['name'];
