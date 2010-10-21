@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 
 include ('config.php');
 include ('custom_functions.php');
-
+/*
 if isset($_GET)
 {
 echo"Modify a Feature <br />";
@@ -27,7 +27,7 @@ hidden("id",$id);
 stopform("Modifify Feature");
 }
 else
-{
+{*/
 
 	echo"Please Select a Feature to Modify: <br />";
 
@@ -38,5 +38,5 @@ else
 		echo" <ahref='mod_feature.php?i=$id'>$name</a><br />";
 	}
 
-}
+//}
 ?>
