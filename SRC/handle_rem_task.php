@@ -4,8 +4,7 @@ include ('config.php');
 include ('custom_functions.php');
 
 $t = $_POST['id'];
-if (!empty($t))
-{
+
 $p = explode(“,”,$_POST['id']);
 echo $t;
 	for($i=0; $i < count($p); $i++)
@@ -17,8 +16,6 @@ echo $t;
 		echo"$mname	<br />";
     }
 	
-	
-}
 
 
 ?>
