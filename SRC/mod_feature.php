@@ -35,7 +35,7 @@ else
 	{
 		$id = $feat[$k]['id'];
 		$name = $feat[$k]['name'];
-		echo" <ahref='mod_feature.php?i=$id'>$name</a><br />';
+		echo" <ahref='mod_feature.php?i=$id'>$name</a><br />";
 	}
 
 }
