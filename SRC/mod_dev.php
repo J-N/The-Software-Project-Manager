@@ -14,7 +14,7 @@ if (isset($t))
 	
 	$f = myq("select * from developers where id=$id");
 	$dname = $f[0]['name'];
-	$desc = $f[0]['email'];
+	$email = $f[0]['email'];
 
 	tbox("Name","dname",$dname);
 	tbox("Email","email",$email);
