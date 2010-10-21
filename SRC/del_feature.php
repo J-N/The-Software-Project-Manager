@@ -29,7 +29,7 @@ else
 	{
 		$id = $feat[$k]['id'];
 		$name = $feat[$k]['name'];
-		echo" <a href='del_dev.php?i=$id'>$name</a><br />";
+		echo" <a href='del_feature.php?i=$id'>$name</a><br />";
 	}
 
 }
