@@ -14,11 +14,11 @@ $fname = $post['fname'];
 $desc = $post['desc'];
 $details = $post['details'];
 $q = "Insert into features (name,description,details) values ('$fname','$desc','$details')";
-//$r = @mysql_query($q);
+$r = @mysql_query($q);
 echo  mysql_error();
-echo $q;
+//echo $q;
 //we should do some mysql error checking here also...
 
-//echo"Feature $post['fname'] has been added";
+echo"Feature $fname has been added";
 
 ?>
