@@ -36,4 +36,15 @@ foreach( $dev = myq("SELECT * FROM tasks where developer=$did") as $k=>$v)
 stopform("Delete Task(s)");
 
 echo"<a href='add_task.php'>Add a Task</a>";
+echo"<br /><br /><a href='add_feature.php'>Add a Feature</a>";
+echo"<br /><a href='mod_feature.php'>Modify a Feature</a>";
+echo"<br /><a href='del_feature.php'>Remove a Feature</a>";
+
+echo"<br /><br /><a href='add_feature.php'>Add a Developer</a>";
+echo"<br /><a href='mod_feature.php'>Modify a Developer</a>";
+echo"<br /><a href='del_feature.php'>Remove a Developer</a>";
+
+echo"<br /><br /><a href='add_milestone.php'>Add a Milestone</a>";
+echo"<br /><a href='mod_milestone.php'>Modify a Milestone</a>";
+echo"<br /><a href='del_milestone.php'>Remove a Milestone</a>";
 ?>
