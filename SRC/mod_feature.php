@@ -9,12 +9,12 @@ $t= $_GET["i"];
 if (isset($t))
 {
 	echo"Modify a Feature <br />";
-
+/*
 	startform("modfeat","POST","handle_mod_feature.php");
 
 	$id = $t;
 	echo"<br /> $id <br />";
-	/*$f = myq("select * from features where id=$id");
+	$f = myq("select * from features where id=$id");
 	$fname = $f[0]['name'];
 	$desc = $f[0]['description'];
 	$details = $f[0]['details'];
@@ -24,9 +24,9 @@ if (isset($t))
 	tbox("Details","details",$details);
 
 	hidden("id",$id);
-*/
-	stopform("Modifify Feature");*/
 
+	stopform("Modifify Feature");*/
+*/
 else
 {
 
