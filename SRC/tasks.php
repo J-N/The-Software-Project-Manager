@@ -32,11 +32,33 @@ if (isset($t))
 	tbox("Description","desc",$desc);
 	tbox("Details","details",$details);
 	tbox("Expected Elapsed Time","eet",$eet);
-	echo"<select name='status'>
-	<option value='PENDING'>PENDING</option>
-	<option value='IN PROGRESS'>IN PROGRESS</option>
-	<option value='COMPLETED'>COMPLETED</option>
-	</select>";
+	echo"<select name='status'>";
+	if($status == "PENDING")
+	{
+	echo"<option value='PENDING' selected='selected'>PENDING</option>";
+	}
+	else
+	{
+		echo"<option value='PENDING'>PENDING</option>";
+	}
+	if($status == "IN PROGRESS")
+	{
+		echo"<option value='IN PROGRESS' selected='selected'>IN PROGRESS</option>";
+	}
+	else
+	{
+		echo"<option value='IN PROGRESS'>IN PROGRESS</option>";
+	}
+	if($status == "IN PROGRESS")
+	{
+		echo"<option value='COMPLETED' selected='selected'>COMPLETED</option>";
+	}
+	else
+	{
+		echo"<option value='COMPLETED'>COMPLETED</option>";
+	}
+	
+	echo"</select>";
 	hidden("id",$id);
 
 	stopform("Modifify Task");
