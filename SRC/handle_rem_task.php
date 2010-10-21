@@ -13,4 +13,5 @@ $t = $_POST['my_array'];
 		$r= mysql_query($q);
     }
 	
+	Echo"The Task(s) have been deleted";
 ?>
