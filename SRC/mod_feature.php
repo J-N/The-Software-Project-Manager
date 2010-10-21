@@ -14,9 +14,9 @@ if (isset($t))
 
 	$id = $_GET['i'];
 	echo"<br /> $id <br />";
-	/*
+	
 	$f = myq("select * from features where id=$id");
-	$fname = $f[0]['name'];
+	/*$fname = $f[0]['name'];
 	$desc = $f[0]['description'];
 	$details = $f[0]['details'];
 
