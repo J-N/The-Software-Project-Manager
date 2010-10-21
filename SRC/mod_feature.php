@@ -8,12 +8,12 @@ include ('custom_functions.php');
 if isset($_GET['i'])
 {
 	echo"Modify a Feature <br />";
-
+/*
 	startform("modfeat","POST","handle_mod_feature.php");
 
 	$id = $_GET['i'];
 	echo"<br /> $id <br />";
-	/*$f = myq("select * from features where id=$id");
+	$f = myq("select * from features where id=$id");
 	$fname = $f[0]['name'];
 	$desc = $f[0]['description'];
 	$details = $f[0]['details'];
@@ -23,8 +23,8 @@ if isset($_GET['i'])
 	tbox("Details","details",$details);
 
 	hidden("id",$id);
-*/
-	stopform("Modifify Feature");
+
+	stopform("Modifify Feature");*/
 }
 else
 {
