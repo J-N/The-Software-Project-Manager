@@ -27,6 +27,7 @@ foreach( $dev = myq("SELECT * FROM tasks where developer=$did") as $k=>$v)
 	$details = $dev[$k]['details'];
 	echo "<tr><td><input type='checkbox' name='del' value='$tid'/></td><td><a href='task.php?i=$tid'>$tname</a></td><td>$desc</td><td>$feat</td><td>$milestone</td></tr>";
 }
+stopform("Delete Task(s)");
 
 echo"<a href='add_task.php'>Add a Task</a>";
 ?>
