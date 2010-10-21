@@ -23,5 +23,5 @@ $r = mysql_query($q);
 
 Echo"Task updated";
 
-}
+
 ?>
