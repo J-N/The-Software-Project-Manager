@@ -13,7 +13,7 @@ $post = post($_POST);
 $dname = $post['dname'];
 $email = $post['email'];
 
-$q = "Insert into features (name,email) values ('$dname','$email')";
+$q = "Insert into developers (name,email) values ('$dname','$email')";
 $r = @mysql_query($q);
 echo  mysql_error();
 
