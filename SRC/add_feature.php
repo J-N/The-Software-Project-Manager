@@ -8,7 +8,7 @@ include ('custom_functions.php');
 
 echo"Add a Feature <br />";
 
-startform("addfeat","POST","handle_add_feat.php");
+startform("addfeat","POST","handle_add_feature.php");
 
 tbox("Feature","fname","");
 tbox("Description","desc","");
