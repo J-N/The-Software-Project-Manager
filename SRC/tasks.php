@@ -21,6 +21,9 @@ if (isset($t))
 	$eet = $f[0]['eet'];
 	$status = $f[0]['status'];
 	
+	//name
+	tbox("Task","fname",$fname);
+	
 	//developer
 	select("Developer", "dev", "SELECT * FROM developers order by name", "name", "id", $dev, 0);
 	//feature
@@ -28,7 +31,7 @@ if (isset($t))
 	//milestone
 	select("Milestone", "milestone", "SELECT * FROM milestones order by name", "name", "id", $mile, 0);
 
-	tbox("Feature","fname",$fname);
+	
 	tbox("Description","desc",$desc);
 	tbox("Details","details",$details);
 	tbox("Expected Elapsed Time","eet",$eet);
