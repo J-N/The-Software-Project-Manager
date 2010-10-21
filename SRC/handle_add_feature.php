@@ -11,9 +11,9 @@ $post = post($_POST);
 echo"test";
 //insert into database
 $q = "Insert into features (name,description,details) values ('$post['fname']','$post['desc']','$post['details']')";
-$r = @mysql_query($q);
+//$r = @mysql_query($q);
 echo  mysql_error();
-
+echo $q;
 //we should do some mysql error checking here also...
 
 echo"Feature $post['fname'] has been added";
