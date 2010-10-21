@@ -7,6 +7,7 @@ $t = $_POST['id'];
 if (!empty($t))
 {
 $p = explode(“,”,$_POST['id']);
+echo $t;
 	for($i=0; $i < count($p); $i++)
     {
 		$k = $p[$i];
