@@ -11,7 +11,7 @@ if (!empty($t))
     {
 		
 		$k = $t[$i];
-		echo $k;
+		print $k;
 		$f = myq("select * from tasks where id=$k");
 		$mname = $f[0]['name'];
 		echo"$mname	<br />";
