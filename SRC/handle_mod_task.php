@@ -21,7 +21,6 @@ $q = "update tasks set name='$name',developer='$dev',feature='$feat',milestone='
 $r = mysql_query($q);
 //should check to make sure it works
 
-echo $q;
 
 Echo"Task updated";
 
