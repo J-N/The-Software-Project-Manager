@@ -28,10 +28,10 @@ foreach( $dev = myq("SELECT * FROM tasks where developer=$did") as $k=>$v)
 	$desc = $dev[$k]['description'];
 	$details = $dev[$k]['details'];
 	
-	$farr = myq("SELECT name FROM features where id=$feat")
+	$farr = myq("SELECT name FROM features where id=$feat");
 	$fname = $farr[0]['name'];
 	
-	$marr = myq("SELECT name FROM milestones where id=$milestone")
+	$marr = myq("SELECT name FROM milestones where id=$milestone");
 	$mname = $marr[0]['name'];
 	
 	
