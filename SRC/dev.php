@@ -27,7 +27,15 @@ foreach( $dev = myq("SELECT * FROM tasks where developer=$did") as $k=>$v)
 	$milestone = $dev[$k]['milestone'];
 	$desc = $dev[$k]['description'];
 	$details = $dev[$k]['details'];
-	echo "<tr><td><input type='checkbox' name='del' value='$tid'/></td><td><a href='task.php?i=$tid'>$tname</a></td><td>$desc</td><td>$feat</td><td>$milestone</td></tr>";
+	
+	$farr = myq("SELECT name FROM features where id=$feat")
+	$fname = $farr[0]['name'];
+	
+	$marr = myq("SELECT name FROM milestones where id=$milestone")
+	$mname = $marr[0]['name'];
+	
+	
+	echo "<tr><td><input type='checkbox' name='del' value='$tid'/></td><td><a href='task.php?i=$tid'>$tname</a></td><td>$desc</td><td>$fname</td><td>$mname</td></tr>";
 }
 ?>
 <br />
