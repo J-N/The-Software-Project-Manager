@@ -3,7 +3,7 @@
 include ('config.php');
 include ('custom_functions.php');
 
-$t = $_POST['t'];
+$t = $_POST['id'];
 if (!empty($t))
 {
 	
@@ -17,4 +17,6 @@ if (!empty($t))
 	
 	
 }
+
+print $t;
 ?>
