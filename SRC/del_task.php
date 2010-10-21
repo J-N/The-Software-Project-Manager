@@ -21,6 +21,10 @@ if (isset($t))
 	stopform("Yes");*/
 	
 	echo $id;
+	for($i=0; $i < count($id); $i++)
+    {
+      echo($id[$i] . "<br />");
+    }
 }
 else
 {
@@ -31,7 +35,7 @@ else
 	{
 		$id = $feat[$k]['id'];
 		$name = $feat[$k]['name'];
-		echo" <input type='checkbox' name='del' value='$id'/> $name  <br />";
+		echo" <input type='checkbox' name='del[]' value='$id'/> $name  <br />";
 	}
 	stopform("Delete Task");
 }

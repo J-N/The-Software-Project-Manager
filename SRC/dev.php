@@ -35,7 +35,7 @@ foreach( $dev = myq("SELECT * FROM tasks where developer=$did") as $k=>$v)
 	$mname = $marr[0]['name'];
 	
 	
-	echo "<tr><td><input type='checkbox' name='del' value='$tid'/></td><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$desc</td><td>$fname</td><td>$mname</td></tr>";
+	echo "<tr><td><input type='checkbox' name='del[]' value='$tid'/></td><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$desc</td><td>$fname</td><td>$mname</td></tr>";
 }
 ?>
 <br />
