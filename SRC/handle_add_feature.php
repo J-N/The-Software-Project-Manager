@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 include ('config.php');
 include ('custom_functions.php');
 
-//$post = post($_POST);
+$post = post($_POST);
 
 //do error checking
 echo"test";
