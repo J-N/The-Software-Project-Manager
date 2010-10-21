@@ -16,10 +16,10 @@ if (isset($t))
 	echo"<br /> $id <br />";
 	
 	$f = myq("select * from features where id=$id");
-	/*$fname = $f[0]['name'];
+	$fname = $f[0]['name'];
 	$desc = $f[0]['description'];
 	$details = $f[0]['details'];
-
+/*
 	tbox("Feature","fname",$fname);
 	tbox("Description","desc",$desc);
 	tbox("Details","details",$details);
