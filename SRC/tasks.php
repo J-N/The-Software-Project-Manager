@@ -49,7 +49,7 @@ if (isset($t))
 	{
 		echo"<option value='IN PROGRESS'>IN PROGRESS</option>";
 	}
-	if($status == "IN PROGRESS")
+	if($status == "COMPLETED")
 	{
 		echo"<option value='COMPLETED' selected='selected'>COMPLETED</option>";
 	}
