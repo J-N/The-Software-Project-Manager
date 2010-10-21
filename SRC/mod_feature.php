@@ -11,8 +11,8 @@ if (isset($t))
 	echo"Modify a Feature <br />";
 
 	startform("modfeat","POST","handle_mod_feature.php");
-/*
-	$id = $_GET['i'];
+
+	$id = $_GET['i'];/*
 	echo"<br /> $id <br />";
 	$f = myq("select * from features where id=$id");
 	$fname = $f[0]['name'];
