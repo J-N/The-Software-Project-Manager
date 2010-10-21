@@ -3,8 +3,8 @@
 include ('config.php');
 include ('custom_functions.php');
 
-$t = $_POST["del"];
-if (isset($t))
+$t = $_POST['del'];
+if (!empty($t))
 {
 
 	$id = $_GET['del'];
