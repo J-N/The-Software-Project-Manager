@@ -6,26 +6,21 @@ include ('custom_functions.php');
 $t = $_POST['del'];
 if (!empty($t))
 {
-
-	//$id = $_GET['del'];
-	/*
-	$f = myq("select * from milestones where id=$id");
-	$mname = $f[0]['name'];
-
-	echo"Are you sure you want to remove $mname	Milestone<br />";
-	
-	startform("delmile","POST","handle_rem_milestone.php");
-
-	hidden("id",$id);
-
-	stopform("Yes");*/
-	$o = count($t);
-	echo "c: $o";
+	echo"Are you sure you want to remove the following tasks: <br />";
 	for($i=0; $i < count($t); $i++)
     {
 		$k = $t[$i];
-      echo"$k <br />";
+		$f = myq("select * from tasks where id=$k");
+		$mname = $f[0]['name'];
+		echo"$mname	<br />";
     }
+	
+	startform("deltask","POST","handle_rem_task.php");
+
+	hidden("id",$id);
+
+	stopform("Yes");
+	
 }
 else
 {
