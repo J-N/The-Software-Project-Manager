@@ -6,15 +6,11 @@ include ('custom_functions.php');
 $t = $_POST['id'];
 if (!empty($t))
 {
-	
-	for($i=0; $i < count($t); $i++)
+$p = explode(“,”,$_POST['id']);
+	for($i=0; $i < count($p); $i++)
     {
-		
-		$k = $t[$i];
-		for($j=0; $j < count($k); $j++)
-		{
-			echo $k[$j];
-		}
+		$k = $p[$i];
+	
 		$f = myq("select * from tasks where id=$k");
 		$mname = $f[0]['name'];
 		echo"$mname	<br />";
@@ -23,5 +19,5 @@ if (!empty($t))
 	
 }
 
-print $t;
+
 ?>

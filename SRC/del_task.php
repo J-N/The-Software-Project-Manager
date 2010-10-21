@@ -17,7 +17,8 @@ if (!empty($t))
 	
 	startform("deltask","POST","handle_rem_task.php");
 
-	hidden("id[]",$t);
+	$single_value = implode(“,”, $t);
+	hidden("id",$single_value);
 
 	stopform("Yes");
 	
