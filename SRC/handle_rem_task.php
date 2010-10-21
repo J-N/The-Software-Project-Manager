@@ -5,16 +5,12 @@ include ('custom_functions.php');
 
 $t = $_POST['my_array'];
 
-echo $t;
 	for($i=0; $i < count($t); $i++)
     {
 		$k = $t[$i];
 	
-		$f = myq("select * from tasks where id=$k");
-		$mname = $f[0]['name'];
-		echo"$mname	<br />";
+		$q="delete from tasks where id='$k'";
+		$r= mysql_query($q);
     }
 	
-
-
 ?>
