@@ -13,9 +13,11 @@ foreach( $dev = myq("SELECT name FROM developers where id=$did") as $k=>$v)
 	$dname = $dev[$k]['name'];
 }
 
+startform("deletetask","POST","handle_task_del.php");
+
 echo "$dname's Tasks: <br /> <table><tr><td></td><td>Task</td><td>Description</td><td>Feature</td><td>Milestone</td></tr>";
 
-startform("deletetask","POST","handle_task_del.php");
+
 
 foreach( $dev = myq("SELECT * FROM tasks where developer=$did") as $k=>$v)
 {
@@ -29,6 +31,7 @@ foreach( $dev = myq("SELECT * FROM tasks where developer=$did") as $k=>$v)
 }
 ?>
 <br />
+</table>
 <?php
 stopform("Delete Task(s)");
 
