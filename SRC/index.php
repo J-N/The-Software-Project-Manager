@@ -1,5 +1,7 @@
 <?php
+include ('config.php');
+include ('custom_function.php');
 
-echo "This is the first page";
+echo "Developers";
 
 ?>
