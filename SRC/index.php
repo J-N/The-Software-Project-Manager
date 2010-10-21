@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 include ('config.php');
-include ('custom_function.php');
+include ('custom_functions.php');
 
 
 echo "Developers";
