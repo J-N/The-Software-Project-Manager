@@ -5,14 +5,14 @@ error_reporting(E_ALL);
 include ('config.php');
 include ('custom_functions.php');
 
-$id= $_GET["i"];
-if (isset($id))
+$t= $_GET["i"];
+if (isset($t))
 {
 	echo"Modify a Feature <br />";
 
 	startform("modfeat","POST","handle_mod_feature.php");
 
-
+	$id = $t;
 	echo"<br /> $id <br />";
 	/*$f = myq("select * from features where id=$id");
 	$fname = $f[0]['name'];
