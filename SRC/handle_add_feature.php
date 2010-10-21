@@ -10,7 +10,10 @@ $post = post($_POST);
 //do error checking
 echo"test";
 //insert into database
-//$q = "Insert into features (name,description,details) values ('$post['fname']','$post['desc']','$post['details']')";
+$fname = $post['fname'];
+$desc = $post['desc'];
+$details = $post['details'];
+$q = "Insert into features (name,description,details) values ('$fname','$desc','$details')";
 //$r = @mysql_query($q);
 echo  mysql_error();
 echo $q;
