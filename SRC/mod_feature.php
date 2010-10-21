@@ -19,11 +19,11 @@ if (isset($t))
 	$fname = $f[0]['name'];
 	$desc = $f[0]['description'];
 	$details = $f[0]['details'];
-/*
+
 	tbox("Feature","fname",$fname);
 	tbox("Description","desc",$desc);
 	tbox("Details","details",$details);
-
+/*
 	hidden("id",$id);
 
 	stopform("Modifify Feature");*/
