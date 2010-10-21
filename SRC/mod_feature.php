@@ -5,7 +5,8 @@ error_reporting(E_ALL);
 include ('config.php');
 include ('custom_functions.php');
 
-if isset($_GET['i'])
+$t = $_GET["i"];
+if isset($t)
 {
 	echo"Modify a Feature <br />";
 /*
