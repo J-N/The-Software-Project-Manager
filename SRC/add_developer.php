@@ -8,7 +8,7 @@ include ('custom_functions.php');
 
 echo"Add a Developer <br />";
 
-startform("addfeat","POST","handle_add_feat.php");
+startform("addfeat","POST","handle_add_dev.php");
 
 tbox("Name","dname","");
 tbox("Email","email","");
