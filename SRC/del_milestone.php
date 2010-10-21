@@ -11,7 +11,6 @@ if (isset($t))
 	
 	$f = myq("select * from milestones where id=$id");
 	$mname = $f[0]['name'];
-	$date = $f[0]['date'];
 
 	echo"Are you sure you want to remove $mname	Milestone<br />";
 	
