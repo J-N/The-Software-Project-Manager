@@ -6,7 +6,7 @@ include ('config.php');
 include ('custom_functions.php');
 
 $t = $_GET["i"];
-if isset($t)
+if (isset($t))
 {
 	echo"Modify a Feature <br />";
 /*
