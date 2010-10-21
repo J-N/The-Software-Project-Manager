@@ -7,7 +7,7 @@ $t = $_POST['del'];
 if (!empty($t))
 {
 
-	$id = $_GET['del'];
+	//$id = $_GET['del'];
 	/*
 	$f = myq("select * from milestones where id=$id");
 	$mname = $f[0]['name'];
@@ -20,10 +20,10 @@ if (!empty($t))
 
 	stopform("Yes");*/
 	
-	echo $id;
-	for($i=0; $i < count($id); $i++)
+	echo $t;
+	for($i=0; $i < count($t); $i++)
     {
-      echo($id[$i] . "<br />");
+      echo($t[$i] . "<br />");
     }
 }
 else
