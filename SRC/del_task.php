@@ -19,11 +19,12 @@ if (!empty($t))
 	hidden("id",$id);
 
 	stopform("Yes");*/
-	
-	echo $t;
+	$o = count($t);
+	echo "c: $o";
 	for($i=0; $i < count($t); $i++)
     {
-      echo($t[$i] . "<br />");
+		$k = $t[$i];
+      echo"$k <br />";
     }
 }
 else
