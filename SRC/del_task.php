@@ -19,7 +19,7 @@ if (!empty($t))
 	
 foreach ($t as $key => $value)
 {
- echo ‘<input type=hidden name=”my_array[]” value=”‘.htmlspecialchars($value).’”>’;
+ echo "<input type=hidden name='my_array[]' value='$value’>";
 }
 
 	stopform("Yes");
