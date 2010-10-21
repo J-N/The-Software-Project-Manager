@@ -1,6 +1,4 @@
 <?php
-ini_set('display_errors', 1); 
-error_reporting(E_ALL);
 
 include ('config.php');
 include ('custom_functions.php');
@@ -13,7 +11,6 @@ if (isset($t))
 	startform("modfeat","POST","handle_mod_feature.php");
 
 	$id = $_GET['i'];
-	echo"<br /> $id <br />";
 	
 	$f = myq("select * from features where id=$id");
 	$fname = $f[0]['name'];
@@ -23,10 +20,10 @@ if (isset($t))
 	tbox("Feature","fname",$fname);
 	tbox("Description","desc",$desc);
 	tbox("Details","details",$details);
-/*
+
 	hidden("id",$id);
 
-	stopform("Modifify Feature");*/
+	stopform("Modifify Feature");
 }
 else
 {
