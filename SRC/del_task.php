@@ -27,7 +27,7 @@ else
 
 	echo"Please Select a Task to Remove: <br />";
 	startform("deletetask","POST","del_task.php");
-	foreach( $feat = myq("select * from Tasks order by name") as $k=>$v)
+	foreach( $feat = myq("select * from tasks order by name") as $k=>$v)
 	{
 		$id = $feat[$k]['id'];
 		$name = $feat[$k]['name'];
