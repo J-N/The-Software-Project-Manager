@@ -2,7 +2,7 @@
 include ('config.php');
 include ('custom_functions.php');
 
-$t = $_GET["i"];
+$t = $_POST["i"];
 if (isset($t))
 {
 	echo"Add a Task <br />";
