@@ -19,6 +19,7 @@ if (isset($t))
 	hidden("id",$id);
 
 	stopform("Yes");
+	startform("nodel","POST","del_feature.php");
 }
 else
 {
