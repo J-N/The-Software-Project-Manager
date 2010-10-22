@@ -41,7 +41,7 @@ foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 
 	echo "<tr><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$desc</td><td>$fname</td><td>$mname</td><td>$status</td></tr>";
 }
-
+echo"</table>";
 
 echo"<br /><br /><a href='add_developer.php'>Add a Developer</a>";
 echo"<br /><a href='mod_dev.php'>Modify a Developer</a>";
