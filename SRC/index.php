@@ -9,7 +9,7 @@ $post = post ($_POST);
 $u = $_POST['f'];
 if($u==1)
 {
-
+/*
 	$full = myq("select * from tasks");
 	$full2 = array();
 	if(count(post['dev'])!=0)
@@ -40,7 +40,7 @@ if($u==1)
 	
 	
 }
-
+*/
 else
 {
 
