@@ -29,12 +29,12 @@ if(isset($u))
 	}
 	else
 	{
-		//$full2=$full;
+		$full2=$full;
 	}
 	
-	foreach( $full as $k=>$v)
+	foreach( $full2 as $k=>$v)
 	{
-		$name = $full[$k]['name'];
+		$name = $full2[$k]['name'];
 		echo "$name";
 	}
 	
