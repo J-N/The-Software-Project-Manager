@@ -23,6 +23,6 @@ $r = mysql_query($q);
 
 
 Echo"Task updated";
-
+echo"<br /> <a href='index.php'>Return home</a>";
 
 ?>

@@ -14,5 +14,5 @@ $r= mysql_query($q);
 
 	
 Echo"The developer has been removed";
-
+echo"<br /> <a href='index.php'>Return home</a>";
 ?>

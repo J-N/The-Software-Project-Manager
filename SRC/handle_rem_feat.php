@@ -16,5 +16,5 @@ $r= mysql_query($q);
 
 	
 Echo"The feature has been removed";
-
+echo"<br /> <a href='index.php'>Return home</a>";
 ?>

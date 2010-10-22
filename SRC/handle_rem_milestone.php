@@ -15,5 +15,5 @@ $r= mysql_query($q);
 
 	
 Echo"The milestone has been removed";
-
+echo"<br /> <a href='index.php'>Return home</a>";
 ?>

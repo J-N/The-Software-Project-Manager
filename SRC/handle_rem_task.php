@@ -14,4 +14,5 @@ $t = $_POST['my_array'];
     }
 	
 	Echo"The Task(s) have been deleted";
+	echo"<br /> <a href='index.php'>Return home</a>";
 ?>

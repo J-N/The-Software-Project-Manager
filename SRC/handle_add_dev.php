@@ -20,5 +20,5 @@ echo  mysql_error();
 //we should do some mysql error checking here also...
 
 echo"Developer $dname has been added";
-
+echo"<br /> <a href='index.php'>Return home</a>";
 ?>
