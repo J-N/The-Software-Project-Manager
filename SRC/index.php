@@ -6,8 +6,8 @@ include ('config.php');
 include ('custom_functions.php');
 
 $post = post ($_POST);
-
-if($_POST['f']==1)
+$u = $_POST['f']
+if($u==1)
 {
 
 	$full = myq("select * from tasks");
@@ -21,7 +21,7 @@ if($_POST['f']==1)
 			{
 				if($dev[$i]==$full[$j]['developer'])
 				{
-					$full2[]=$full[$j]
+					$full2[]=$full[$j];
 				}
 			}
 
