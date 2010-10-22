@@ -24,13 +24,13 @@ foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
 echo "All Tasks: <br /> <table></td><td>Task</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
 foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 {
-	$tid = $dev[$k]['id'];
-	$tname = $dev[$k]['name'];
-	$feat = $dev[$k]['feature'];
-	$milestone = $dev[$k]['milestone'];
-	$desc = $dev[$k]['description'];
-	$details = $dev[$k]['details'];
-	$status = $dev[$k]['status'];
+	$tid = $tasks[$k]['id'];
+	$tname = $tasks[$k]['name'];
+	$feat = $tasks[$k]['feature'];
+	$milestone = $tasks[$k]['milestone'];
+	$desc = $tasks[$k]['description'];
+	$details = $tasks[$k]['details'];
+	$status = $tasks[$k]['status'];
 	
 	$farr = myq("SELECT name FROM features where id=$feat");
 	$fname = $farr[0]['name'];
