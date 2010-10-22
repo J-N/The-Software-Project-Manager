@@ -32,6 +32,12 @@ if(isset($u))
 		echo"in the else";//$full2=$full;
 	}
 	
+	foreach( $dev as $k=>$v)
+	{
+		$name = $dev[$k];
+		echo "$name";
+	}
+	
 	foreach( $full2 as $k=>$v)
 	{
 		$name = $full2[$k]['name'];
