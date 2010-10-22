@@ -14,7 +14,7 @@ if(isset($u))
 	$dev=$_POST['dev'];
 	if(count($dev)!=0)
 	{
-		echo"we are in dev";
+		//echo"we are in dev";
 		for($i=0;$i<count($dev);$i++)
 		{
 			for($j=0;$j<count($full);$j++)
@@ -29,19 +29,54 @@ if(isset($u))
 	}
 	else
 	{
-		echo"in the else";//$full2=$full;
-	}
-	print $_POST['dev'];
-	foreach( $dev as $k=>$v)
-	{
-		$name = $dev[$k];
-		echo "$name";
+		echo"in the else";
+		$full2=$full;
 	}
 	
+	$dev=$_POST['dev'];
+	if(count($dev)!=0)
+	{
+		//echo"we are in dev";
+		for($i=0;$i<count($dev);$i++)
+		{
+			for($j=0;$j<count($full);$j++)
+			{
+				if($dev[$i]==$full[$j]['developer'])
+				{
+					$full2[]=$full[$j];
+				}
+			}
+
+		}
+	}
+	else
+	{
+		echo"in the else";
+		$full2=$full;
+	}
+	
+	echo "<br />Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
 	foreach( $full2 as $k=>$v)
 	{
-		$name = $full2[$k]['name'];
-		echo "$name";
+		$tid = $full2[$k]['id'];
+		$tname = $full2[$k]['name'];
+		$feat = $full2[$k]['feature'];
+		$milestone = $full2[$k]['milestone'];
+		$desc = $full2[$k]['description'];
+		$details = $full2[$k]['details'];
+		$status = $full2[$k]['status'];
+		$developer = $full2[$k]['developer'];
+	
+		$farr = myq("SELECT name FROM features where id=$feat");
+		$fname = $farr[0]['name'];
+	
+		$marr = myq("SELECT name FROM milestones where id=$milestone");
+		$mname = $marr[0]['name'];
+	
+		$dev2 = myq("SELECT * FROM developers where id='$developer'");
+		$dname = $dev2[0]['name'];
+
+		echo "<tr><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$dname</td><td>$desc</td><td>$fname</td><td>$mname</td><td>$status</td></tr>";
 	}
 	
 	
