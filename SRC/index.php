@@ -14,7 +14,6 @@ if(isset($u))
 	$dev=$_POST['dev'];
 	if(count($dev)!=0)
 	{
-		//echo"we are in dev";
 		for($i=0;$i<count($dev);$i++)
 		{
 			for($j=0;$j<count($full);$j++)
@@ -29,7 +28,6 @@ if(isset($u))
 	}
 	else
 	{
-		echo"in the else1";
 		$full2=$full;
 	}
 	
@@ -37,7 +35,6 @@ if(isset($u))
 	$status=$_POST['status'];
 	if(count($status)!=0)
 	{
-		echo"we are in status";
 		for($i=0;$i<count($status);$i++)
 		{
 			for($j=0;$j<count($full2);$j++)
@@ -46,7 +43,6 @@ if(isset($u))
 				echo $full2[$j]['status'];
 				if($status[$i]==$full2[$j]['status'])
 				{
-					echo" we are in the if";
 					$full3[]=$full2[$j];
 				}
 			}
@@ -55,8 +51,30 @@ if(isset($u))
 	}
 	else
 	{
-		echo"in the else2";
 		$full3=$full2;
+	}
+	
+	$full4 = array();
+	$feature=$_POST['feature'];
+	if(count($feature)!=0)
+	{
+		for($i=0;$i<count($feature);$i++)
+		{
+			for($j=0;$j<count($full3);$j++)
+			{
+				echo $feature[$i];
+				echo $full3[$j]['feature'];
+				if($feature[$i]==$full3[$j]['feature'])
+				{
+					$full4[]=$full3[$j];
+				}
+			}
+
+		}
+	}
+	else
+	{
+		$full4=$full3;
 	}
 	
 	echo "<br />Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
@@ -112,7 +130,7 @@ echo"<option value='IN PROGRESS'>IN PROGRESS</option>";
 echo"<option value='COMPLETED'>COMPLETED</option>";
 echo"</select>";
  echo"</td><td>";
-select_no("", "feat", "SELECT * FROM features order by name", "name", "id", "", 1);
+select_no("", "feature", "SELECT * FROM features order by name", "name", "id", "", 1);
 echo"</td><td>"; select_no("", "milestone", "SELECT * FROM milestones order by name", "name", "id", "", 1); echo"</td></tr>";
 echo"</table>";
 echo"<br />";
