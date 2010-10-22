@@ -10,7 +10,7 @@ if(isset($u))
 {
 
 	$full = myq("select * from tasks");
-	$full2 = array();
+	/*$full2 = array();
 	if(count(post['dev'])!=0)
 	{
 		$dev=post['dev'];
@@ -30,7 +30,7 @@ if(isset($u))
 	{
 		$full2=$full;
 	}
-	
+	*/
 	foreach( $full as $k=>$v)
 	{
 		$name = $full[$k]['name'];
