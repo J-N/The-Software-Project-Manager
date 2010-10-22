@@ -29,7 +29,7 @@ if(isset($u))
 	}
 	else
 	{
-		//$full2=$full;
+		echo"in the else";//$full2=$full;
 	}
 	
 	foreach( $full2 as $k=>$v)
