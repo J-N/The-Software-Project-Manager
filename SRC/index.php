@@ -78,16 +78,16 @@ if(isset($u))
 	}
 	
 	echo "<br />Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
-	foreach( $full3 as $k=>$v)
+	foreach( $full4 as $k=>$v)
 	{
-		$tid = $full3[$k]['id'];
-		$tname = $full3[$k]['name'];
-		$feat = $full3[$k]['feature'];
-		$milestone = $full3[$k]['milestone'];
-		$desc = $full3[$k]['description'];
-		$details = $full3[$k]['details'];
-		$status = $full3[$k]['status'];
-		$developer = $full3[$k]['developer'];
+		$tid = $full4[$k]['id'];
+		$tname = $full4[$k]['name'];
+		$feat = $full4[$k]['feature'];
+		$milestone = $full4[$k]['milestone'];
+		$desc = $full4[$k]['description'];
+		$details = $full4[$k]['details'];
+		$status = $full4[$k]['status'];
+		$developer = $full4[$k]['developer'];
 	
 		$farr = myq("SELECT name FROM features where id=$feat");
 		$fname = $farr[0]['name'];
