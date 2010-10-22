@@ -177,4 +177,24 @@ function select($display, $name, $query, $col, $vcol, $selected, $multiple)
 	}
 	Echo "</select> <br />";
 }
+function select_no($display, $name, $query, $col, $vcol, $selected, $multiple)
+{
+    Echo $multiple == 1 ? "$display: <select multiple name='".$name."[]'>" : "$display: <select name='$name'>";
+	
+	foreach ($row=myq($query) as $key => $value) 
+	{
+		echo"<option value='".$row[$key][$vcol]."'"; 
+		
+		if ($multiple == 1 )
+		{
+			Echo in_array($row[$key][$vcol],$selected) ? "selected='selected'" : "";
+		}
+		else
+		{
+			Echo $row[$key][$vcol]==$selected ? "selected='selected'" : "";
+		}
+		echo">".$row[$key][$col]."</option>";
+	}
+	Echo "</select> <br />";
+}
 ?> 

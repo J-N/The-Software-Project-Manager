@@ -20,8 +20,9 @@ foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
 	}
 }
 
-echo"Filter by: ";  select("Developer", "dev", "SELECT * FROM developers order by name", "name", "id", "1", 1);
-
+echo"Filter by: <br /><table><tr><td>Developer</td></tr><tr><td>";  
+select_no("Developer", "dev", "SELECT * FROM developers order by name", "name", "id", "1", 1);
+echo"</td></tr>";
 echo "<br /> All Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
 foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 {
