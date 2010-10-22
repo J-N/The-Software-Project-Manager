@@ -5,6 +5,44 @@ error_reporting(E_ALL);
 include ('config.php');
 include ('custom_functions.php');
 
+$post = post ($_POST);
+
+if($_POST['f']==1)
+{
+
+	$full = myq("select * from tasks");
+	$full2 = array();
+	if(count(post['dev'])!=0)
+	{
+		$dev=post['dev'];
+		for($i=0;$i<count($dev);$i++)
+		{
+			for($j=0;$j<count($full);$j++)
+			{
+				if($dev[$i]==$full[$j]['developer'])
+				{
+					$full2[]=$full[$j]
+				}
+			}
+
+		}
+	}
+	else
+	{
+		$full2=$full;
+	}
+	
+	foreach( $full2 as $k=>$v)
+	{
+		$name = $full2[$k]['name'];
+		echo "$name";
+	}
+	
+	
+}
+
+else
+{
 
 echo "Developers: <br />";
 foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
@@ -33,6 +71,7 @@ select_no("", "feat", "SELECT * FROM features order by name", "name", "id", "", 
 echo"</td><td>"; select_no("", "milestone", "SELECT * FROM milestones order by name", "name", "id", "", 1); echo"</td></tr>";
 echo"</table>";
 echo"<br />";
+hidden("f",1);
 stopform("Filter");
 echo "<br /> All Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
 foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
@@ -62,6 +101,6 @@ echo"</table>";
 echo"<br /><br /><a href='add_developer.php'>Add a Developer</a>";
 echo"<br /><a href='mod_dev.php'>Modify a Developer</a>";
 echo"<br /><a href='del_dev.php'>Remove a Developer</a>";
-
+}
 
 ?>
