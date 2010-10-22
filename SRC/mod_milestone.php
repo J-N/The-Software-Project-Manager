@@ -32,7 +32,10 @@ else
 	{
 		$id = $feat[$k]['id'];
 		$name = $feat[$k]['name'];
-		echo" <a href='mod_milestone.php?i=$id'>$name</a><br />";
+		if($id != 1)
+		{
+			echo" <a href='mod_milestone.php?i=$id'>$name</a><br />";
+		}
 	}
 
 }
