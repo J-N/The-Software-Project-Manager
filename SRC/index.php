@@ -11,7 +11,7 @@ if(isset($u))
 
 	$full = myq("select * from tasks");
 	$full2 = array();
-	$dev=$post['dev'];
+	$dev=$_POST['dev'];
 	if(count($dev)!=0)
 	{
 		echo"we are in dev";
@@ -31,7 +31,7 @@ if(isset($u))
 	{
 		echo"in the else";//$full2=$full;
 	}
-	
+	print $_POST['dev'];
 	foreach( $dev as $k=>$v)
 	{
 		$name = $dev[$k];
