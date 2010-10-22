@@ -66,6 +66,7 @@ if (isset($t))
 
 	stopform("Modify Task");
 	startform("bo","POST","breakout.php");
+	hidden("i",$id);
 	stopform("Breakout Task");
 	startform("clone","POST","clone.php");
 	hidden("i",$id);
