@@ -5,9 +5,9 @@ include ('custom_functions.php');
 $t = $_GET["i"];
 if (isset($t))
 {
-	echo"Modify a Task <br />";
+	echo"Add a Task <br />";
 
-	startform("modtask","POST","handle_mod_task.php");
+	startform("modtask","POST","handle_add_task.php");
 
 	$id = $_GET['i'];
 	
@@ -68,20 +68,6 @@ if (isset($t))
 	startform("bo","POST","breakout.php");
 	stopform("Breakout Task");
 	startform("clone","POST","clone.php");
-	hidden("i",$id);
 	stopform("Clone Task");
-}
-else
-{
-
-	echo"Please Select a Task to View/Modify: <br />";
-
-	foreach( $feat = myq("select * from tasks order by name") as $k=>$v)
-	{
-		$id = $feat[$k]['id'];
-		$name = $feat[$k]['name'];
-		echo" <a href='tasks.php?i=$id'>$name</a><br />";
-	}
-
 }
 ?>
