@@ -21,7 +21,7 @@ foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
 }
 
 
-echo "<br /> All Tasks: <br /> <table></td><td>Task</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
+echo "<br /> All Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
 foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 {
 	$tid = $tasks[$k]['id'];
@@ -39,8 +39,10 @@ foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 	$marr = myq("SELECT name FROM milestones where id=$milestone");
 	$mname = $marr[0]['name'];
 	
+	$dev2 = myq("SELECT * FROM developers where id='$developer'")
+	$dname = $dev2[0]['name'];
 
-	echo "<tr><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$developer</td><td>$desc</td><td>$fname</td><td>$mname</td><td>$status</td></tr>";
+	echo "<tr><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$dname</td><td>$desc</td><td>$fname</td><td>$mname</td><td>$status</td></tr>";
 }
 echo"</table>";
 
