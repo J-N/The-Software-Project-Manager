@@ -23,7 +23,7 @@ foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
 echo"Filter by: <br /><table><tr><td>Developer</td><td>Status</td></tr><tr><td>";  
 select_no("", "dev", "SELECT * FROM developers order by name", "name", "id", "1", 1);
 echo"</td><td>";
-echo"<select name='status'>"; 
+echo"<select multiple name='status'>"; 
 echo"<option value='PENDING'>PENDING</option>";
 echo"<option value='IN PROGRESS'>IN PROGRESS</option>";
 echo"<option value='COMPLETED' selected='selected'>COMPLETED</option>";
