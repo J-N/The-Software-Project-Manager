@@ -14,7 +14,7 @@ if(isset($u))
 	$dev=$post['dev'];
 	if(count($dev)!=0)
 	{
-		
+		echo"we are in dev";
 		for($i=0;$i<count($dev);$i++)
 		{
 			for($j=0;$j<count($full);$j++)
@@ -29,7 +29,7 @@ if(isset($u))
 	}
 	else
 	{
-		$full2=$full;
+		//$full2=$full;
 	}
 	
 	foreach( $full2 as $k=>$v)
