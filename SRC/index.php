@@ -22,7 +22,7 @@ foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
 
 
 echo "All Tasks: <br /> <table></td><td>Task</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
-foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v;
+foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 {
 	$tid = $dev[$k]['id'];
 	$tname = $dev[$k]['name'];
