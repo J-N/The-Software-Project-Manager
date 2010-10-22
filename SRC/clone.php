@@ -9,7 +9,7 @@ if (isset($t))
 
 	startform("modtask","POST","handle_add_task.php");
 
-	$id = $_GET['i'];
+	$id = $_POST['i'];
 	
 	$f = myq("select * from tasks where id=$id");
 	$fname = $f[0]['name'];
