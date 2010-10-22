@@ -29,8 +29,8 @@ echo"<option value='IN PROGRESS'>IN PROGRESS</option>";
 echo"<option value='COMPLETED'>COMPLETED</option>";
 echo"</select>";
  echo"</td><td>";
-select_no("Feature", "feat", "SELECT * FROM features order by name", "name", "id", "", 1);
-echo"</td><td>"; select("Milestone", "milestone", "SELECT * FROM milestones order by name", "name", "id", "", 1); echo"</td></tr>";
+select_no("", "feat", "SELECT * FROM features order by name", "name", "id", "", 1);
+echo"</td><td>"; select("", "milestone", "SELECT * FROM milestones order by name", "name", "id", "", 1); echo"</td></tr>";
 echo"</table>";
 echo "<br /> All Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
 foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
