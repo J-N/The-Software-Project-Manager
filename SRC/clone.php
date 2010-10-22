@@ -22,7 +22,7 @@ if (isset($t))
 	$status = $f[0]['status'];
 	
 	//name
-	tbox("Task","fname",$fname);
+	tbox("Task","tname",$fname);
 	
 	//developer
 	select("Developer", "dev", "SELECT * FROM developers order by name", "name", "id", $dev, 0);
@@ -32,7 +32,7 @@ if (isset($t))
 	select("Milestone", "milestone", "SELECT * FROM milestones order by name", "name", "id", $mile, 0);
 
 	
-	tbox("Description","desc",$desc);
+	tbox("Description","description",$desc);
 	tbox("Details","details",$details);
 	tbox("Expected Elapsed Time","eet",$eet);
 	echo"<select name='status'>";
