@@ -14,7 +14,7 @@ foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
 	$email = $dev[$k]['email'];
 	if ($id!=1)
 	{
-		echo"<a href='dev.php?i=$id'>$name</a><br />";
+		echo"<a href='dev.php?i=$id'>$name</a> - ";
 		//print seperator and then $email
 		echo"$email<br />";
 	}
