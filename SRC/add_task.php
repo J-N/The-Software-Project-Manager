@@ -19,7 +19,7 @@ select("Feature", "feat", "SELECT * FROM features order by name", "name", "id", 
 select("Milestone", "milestone", "SELECT * FROM milestones order by name", "name", "id", "1", 0);
 //textboxes
 tbox("Description","description","");
-tbox("Description","details","");
+tbox("Details","details","");
 tbox("Expected Elapsed Time","eet","");
 //status -- hardcoded
 hidden("status","PENDING");
