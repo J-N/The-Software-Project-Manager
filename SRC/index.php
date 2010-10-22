@@ -29,7 +29,7 @@ if(isset($u))
 	}
 	else
 	{
-		echo"in the else";
+		echo"in the else1";
 		$full2=$full;
 	}
 	
@@ -37,7 +37,7 @@ if(isset($u))
 	$status=$_POST['status'];
 	if(count($status)!=0)
 	{
-		//echo"we are in dev";
+		echo"we are in status";
 		for($i=0;$i<count($status);$i++)
 		{
 			for($j=0;$j<count($full2);$j++)
@@ -52,7 +52,7 @@ if(isset($u))
 	}
 	else
 	{
-		echo"in the else";
+		echo"in the else2";
 		$full3=$full2;
 	}
 	
