@@ -18,6 +18,9 @@ if (isset($t))
 	hidden("id",$id);
 
 	stopform("Yes");
+	startform("nodel","POST","del_dev.php");
+	hidden("id",$id);
+	stopform("No");
 }
 else
 {

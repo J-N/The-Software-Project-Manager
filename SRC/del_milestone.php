@@ -19,6 +19,9 @@ if (isset($t))
 	hidden("id",$id);
 
 	stopform("Yes");
+	startform("nodel","POST","del_milestone.php");
+	hidden("id",$id);
+	stopform("No");
 }
 else
 {
