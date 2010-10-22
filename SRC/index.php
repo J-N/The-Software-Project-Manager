@@ -33,17 +33,18 @@ if(isset($u))
 		$full2=$full;
 	}
 	
-	$dev=$_POST['dev'];
-	if(count($dev)!=0)
+	$full3 = array();
+	$status=$_POST['status'];
+	if(count($status)!=0)
 	{
 		//echo"we are in dev";
-		for($i=0;$i<count($dev);$i++)
+		for($i=0;$i<count($status);$i++)
 		{
-			for($j=0;$j<count($full);$j++)
+			for($j=0;$j<count($full2);$j++)
 			{
-				if($dev[$i]==$full[$j]['developer'])
+				if($status[$i]==$full2[$j]['status'])
 				{
-					$full2[]=$full[$j];
+					$full3[]=$full2[$j];
 				}
 			}
 
@@ -52,20 +53,20 @@ if(isset($u))
 	else
 	{
 		echo"in the else";
-		$full2=$full;
+		$full3=$full2;
 	}
 	
 	echo "<br />Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
-	foreach( $full2 as $k=>$v)
+	foreach( $full3 as $k=>$v)
 	{
-		$tid = $full2[$k]['id'];
-		$tname = $full2[$k]['name'];
-		$feat = $full2[$k]['feature'];
-		$milestone = $full2[$k]['milestone'];
-		$desc = $full2[$k]['description'];
-		$details = $full2[$k]['details'];
-		$status = $full2[$k]['status'];
-		$developer = $full2[$k]['developer'];
+		$tid = $full3[$k]['id'];
+		$tname = $full3[$k]['name'];
+		$feat = $full3[$k]['feature'];
+		$milestone = $full3[$k]['milestone'];
+		$desc = $full3[$k]['description'];
+		$details = $full3[$k]['details'];
+		$status = $full3[$k]['status'];
+		$developer = $full3[$k]['developer'];
 	
 		$farr = myq("SELECT name FROM features where id=$feat");
 		$fname = $farr[0]['name'];
