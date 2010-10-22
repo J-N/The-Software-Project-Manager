@@ -6,8 +6,8 @@ include ('config.php');
 include ('custom_functions.php');
 
 $post = post ($_POST);
-$u = $_POST['f'];
-if($u==1)
+$u = $_POST["f"];
+if(isset($u))
 {
 /*
 	$full = myq("select * from tasks");
@@ -38,9 +38,9 @@ if($u==1)
 		echo "$name";
 	}
 	
-	
+	*/
 }
-*/
+
 else
 {
 
