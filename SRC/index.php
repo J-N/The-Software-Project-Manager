@@ -31,6 +31,7 @@ foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 	$desc = $tasks[$k]['description'];
 	$details = $tasks[$k]['details'];
 	$status = $tasks[$k]['status'];
+	$developer = $tasks[$k]['developer'];
 	
 	$farr = myq("SELECT name FROM features where id=$feat");
 	$fname = $farr[0]['name'];
@@ -39,7 +40,7 @@ foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 	$mname = $marr[0]['name'];
 	
 
-	echo "<tr><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$desc</td><td>$fname</td><td>$mname</td><td>$status</td></tr>";
+	echo "<tr><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$developer</td><td>$desc</td><td>$fname</td><td>$mname</td><td>$status</td></tr>";
 }
 echo"</table>";
 
