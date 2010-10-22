@@ -78,7 +78,7 @@ if(isset($u))
 
 		echo "<tr><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$dname</td><td>$desc</td><td>$fname</td><td>$mname</td><td>$status</td></tr>";
 	}
-	
+	echo"</table>";
 	
 }
 
