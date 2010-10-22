@@ -20,6 +20,8 @@ if (isset($t))
 
 	stopform("Yes");
 	startform("nodel","POST","del_feature.php");
+	hidden("id",$id);
+	stopform("No");
 }
 else
 {
