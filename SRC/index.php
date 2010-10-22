@@ -11,9 +11,10 @@ if(isset($u))
 
 	$full = myq("select * from tasks");
 	$full2 = array();
-	if(count(post['dev'])!=0)
+	$dev=post['dev'];
+	if(count($dev)!=0)
 	{
-		/*$dev=post['dev'];
+		/*
 		for($i=0;$i<count($dev);$i++)
 		{
 			for($j=0;$j<count($full);$j++)
