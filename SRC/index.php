@@ -11,7 +11,7 @@ if(isset($u))
 
 	$full = myq("select * from tasks");
 	$full2 = array();
-	/*$dev=post['dev'];
+	$dev=$post['dev'];
 	if(count($dev)!=0)
 	{
 		
@@ -30,7 +30,7 @@ if(isset($u))
 	else
 	{
 		//$full2=$full;
-	}*/
+	}
 	
 	foreach( $full as $k=>$v)
 	{
