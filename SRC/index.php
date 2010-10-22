@@ -1,6 +1,5 @@
 <?php
-ini_set('display_errors', 1); 
-error_reporting(E_ALL);
+
 
 include ('config.php');
 include ('custom_functions.php');
@@ -9,7 +8,7 @@ $post = post ($_POST);
 $u = $_POST["f"];
 if(isset($u))
 {
-/*
+
 	$full = myq("select * from tasks");
 	$full2 = array();
 	if(count(post['dev'])!=0)
@@ -32,13 +31,13 @@ if(isset($u))
 		$full2=$full;
 	}
 	
-	foreach( $full2 as $k=>$v)
+	foreach( $full as $k=>$v)
 	{
-		$name = $full2[$k]['name'];
+		$name = $full[$k]['name'];
 		echo "$name";
 	}
 	
-	*/
+	
 }
 
 else
