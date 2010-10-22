@@ -10,7 +10,7 @@ $dbc = mysql_connect (DB_HOST, DB_USER, DB_PASSWORD) OR die ('Could not connect 
 mysql_select_db (DB_NAME) OR die ('Could not select the database: ' . mysql_error() );
 
 $head = "";
-
-echo"<table width='100%'><tr><td><img src='banner.png'/></td></tr></table>";
+echo"test":
+echo"<table width='100%'><tr><td><img src='banner.png'></td></tr></table>";
 echo"<center>";
 ?>
