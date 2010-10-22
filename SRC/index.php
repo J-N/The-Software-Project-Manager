@@ -10,8 +10,8 @@ if(isset($u))
 {
 
 	$full = myq("select * from tasks");
-	/*$full2 = array();
-	$dev=post['dev'];
+	$full2 = array();
+	/*$dev=post['dev'];
 	if(count($dev)!=0)
 	{
 		
