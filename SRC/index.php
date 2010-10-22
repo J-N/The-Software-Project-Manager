@@ -26,7 +26,6 @@ echo"</td><td>";
 echo"<select multiple name='status'>"; 
 echo"<option value='PENDING'>PENDING</option>";
 echo"<option value='IN PROGRESS'>IN PROGRESS</option>";
-echo"<option value='COMPLETED' selected='selected'>COMPLETED</option>";
 echo"<option value='COMPLETED'>COMPLETED</option>";
 echo"</select>"; echo"</td></tr>";
 echo"</table>";
