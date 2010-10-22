@@ -48,10 +48,6 @@ echo"<br /><br /><a href='add_feature.php'>Add a Feature</a>";
 echo"<br /><a href='mod_feature.php'>Modify a Feature</a>";
 echo"<br /><a href='del_feature.php'>Remove a Feature</a>";
 
-echo"<br /><br /><a href='add_developer.php'>Add a Developer</a>";
-echo"<br /><a href='mod_dev.php'>Modify a Developer</a>";
-echo"<br /><a href='del_dev.php'>Remove a Developer</a>";
-
 echo"<br /><br /><a href='add_milestone.php'>Add a Milestone</a>";
 echo"<br /><a href='mod_milestone.php'>Modify a Milestone</a>";
 echo"<br /><a href='del_milestone.php'>Remove a Milestone</a>";

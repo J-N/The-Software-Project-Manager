@@ -16,6 +16,7 @@ foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
 	{
 		echo"<a href='dev.php?i=$id'>$name</a><br />";
 		//print seperator and then $email
+		echo"$email<br />";
 	}
 }
 
