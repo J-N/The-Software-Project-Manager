@@ -106,7 +106,7 @@ startform("filter","POST","index.php");
 echo"Filter by: <br /><table><tr><td>Developer</td><td>Status</td><td>Feature</td><td>Milestone</td></tr><tr><td>";  
 select_no("", "dev", "SELECT * FROM developers order by name", "name", "id", "1", 1);
 echo"</td><td>";
-echo"<select multiple name='status'>"; 
+echo"<select multiple name='status[]'>"; 
 echo"<option value='PENDING'>PENDING</option>";
 echo"<option value='IN PROGRESS'>IN PROGRESS</option>";
 echo"<option value='COMPLETED'>COMPLETED</option>";
