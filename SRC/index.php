@@ -39,7 +39,7 @@ foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 	$marr = myq("SELECT name FROM milestones where id=$milestone");
 	$mname = $marr[0]['name'];
 	
-	$dev2 = myq("SELECT * FROM developers where id='$developer'")
+	$dev2 = myq("SELECT * FROM developers where id='$developer'");
 	$dname = $dev2[0]['name'];
 
 	echo "<tr><td><a href='tasks.php?i=$tid'>$tname</a></td><td>$dname</td><td>$desc</td><td>$fname</td><td>$mname</td><td>$status</td></tr>";
