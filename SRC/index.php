@@ -6,7 +6,7 @@ include ('config.php');
 include ('custom_functions.php');
 
 $post = post ($_POST);
-$u = $_POST['f']
+$u = $_POST['f'];
 if($u==1)
 {
 
