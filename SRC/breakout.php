@@ -65,7 +65,7 @@ if (isset($t))
 	hidden("id",$id);
 
 	
-echo"Task 2: <br />";
+echo"<br /><br />Task 2: <br />";
 
 
 tbox("Name","tname2","");
