@@ -64,10 +64,7 @@ if (isset($t))
 	echo"</select>";
 	hidden("id",$id);
 
-	stopform("Modify Task");
-	startform("bo","POST","breakout.php");
-	stopform("Breakout Task");
-	startform("clone","POST","clone.php");
-	stopform("Clone Task");
+	stopform("Add Task");
+
 }
 ?>
