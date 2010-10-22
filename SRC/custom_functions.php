@@ -179,7 +179,7 @@ function select($display, $name, $query, $col, $vcol, $selected, $multiple)
 }
 function select_no($display, $name, $query, $col, $vcol, $selected, $multiple)
 {
-    Echo $multiple == 1 ? "$display: <select multiple name='".$name."[]'>" : "$display: <select name='$name'>";
+    Echo $multiple == 1 ? "$display <select multiple name='".$name."[]'>" : "$display: <select name='$name'>";
 	
 	foreach ($row=myq($query) as $key => $value) 
 	{
