@@ -80,7 +80,7 @@ tbox("Description","description2","");
 tbox("Details","details2","");
 tbox("Expected Elapsed Time","eet2","");
 //status -- hardcoded
-hidden("status","PENDING2");
+hidden("status","PENDING");
 	
 	
 	
