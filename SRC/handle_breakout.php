@@ -36,8 +36,8 @@ $feat = $post['feat'];
 //milestone
 $mile = $post['milestone'];
 
-$name = $post['fname'];
-$desc = $post['desc'];
+$name = $post['tname'];
+$desc = $post['description'];
 $details = $post['details'];
 $eet = $post['eet'];
 $status = $post['status'];
