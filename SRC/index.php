@@ -39,8 +39,6 @@ if(isset($u))
 		{
 			for($j=0;$j<count($full2);$j++)
 			{
-				echo $status[$i];
-				echo $full2[$j]['status'];
 				if($status[$i]==$full2[$j]['status'])
 				{
 					$full3[]=$full2[$j];
@@ -62,8 +60,6 @@ if(isset($u))
 		{
 			for($j=0;$j<count($full3);$j++)
 			{
-				echo $feature[$i];
-				echo $full3[$j]['feature'];
 				if($feature[$i]==$full3[$j]['feature'])
 				{
 					$full4[]=$full3[$j];
@@ -85,8 +81,6 @@ if(isset($u))
 		{
 			for($j=0;$j<count($full4);$j++)
 			{
-				echo $milestone[$i];
-				echo $full4[$j]['milestone'];
 				if($milestone[$i]==$full4[$j]['milestone'])
 				{
 					$full5[]=$full4[$j];
