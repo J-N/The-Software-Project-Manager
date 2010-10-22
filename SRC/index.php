@@ -77,17 +77,40 @@ if(isset($u))
 		$full4=$full3;
 	}
 	
-	echo "<br />Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
-	foreach( $full4 as $k=>$v)
+	$full5 = array();
+	$milestone=$_POST['milestone'];
+	if(count($milestone)!=0)
 	{
-		$tid = $full4[$k]['id'];
-		$tname = $full4[$k]['name'];
-		$feat = $full4[$k]['feature'];
-		$milestone = $full4[$k]['milestone'];
-		$desc = $full4[$k]['description'];
-		$details = $full4[$k]['details'];
-		$status = $full4[$k]['status'];
-		$developer = $full4[$k]['developer'];
+		for($i=0;$i<count($milestone);$i++)
+		{
+			for($j=0;$j<count($full4);$j++)
+			{
+				echo $milestone[$i];
+				echo $full4[$j]['milestone'];
+				if($milestone[$i]==$full4[$j]['milestone'])
+				{
+					$full5[]=$full4[$j];
+				}
+			}
+
+		}
+	}
+	else
+	{
+		$full5=$full4;
+	}
+	
+	echo "<br />Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
+	foreach( $full5 as $k=>$v)
+	{
+		$tid = $full5[$k]['id'];
+		$tname = $full5[$k]['name'];
+		$feat = $full5[$k]['feature'];
+		$milestone = $full5[$k]['milestone'];
+		$desc = $full5[$k]['description'];
+		$details = $full5[$k]['details'];
+		$status = $full5[$k]['status'];
+		$developer = $full5[$k]['developer'];
 	
 		$farr = myq("SELECT name FROM features where id=$feat");
 		$fname = $farr[0]['name'];
