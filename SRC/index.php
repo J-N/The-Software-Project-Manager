@@ -19,7 +19,7 @@ foreach( $dev = myq("SELECT * FROM developers order by name") as $k=>$v)
 		echo"$email<br />";
 	}
 }
-
+startform("filter","POST","index.php");
 echo"Filter by: <br /><table><tr><td>Developer</td><td>Status</td><td>Feature</td><td>Milestone</td></tr><tr><td>";  
 select_no("", "dev", "SELECT * FROM developers order by name", "name", "id", "1", 1);
 echo"</td><td>";
@@ -32,6 +32,7 @@ echo"</select>";
 select_no("", "feat", "SELECT * FROM features order by name", "name", "id", "", 1);
 echo"</td><td>"; select("", "milestone", "SELECT * FROM milestones order by name", "name", "id", "", 1); echo"</td></tr>";
 echo"</table>";
+stopform("Filter");
 echo "<br /> All Tasks: <br /> <table></td><td>Task</td><td>Developer</td><td>Description</td><td>Feature</td><td>Milestone</td><td>Status</td></tr>";
 foreach ( $tasks = myq("select * from tasks order by status") as $k=>$v)
 {
