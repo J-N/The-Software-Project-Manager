@@ -42,8 +42,11 @@ if(isset($u))
 		{
 			for($j=0;$j<count($full2);$j++)
 			{
+				echo $status[$i];
+				echo $full2[$j]['status'];
 				if($status[$i]==$full2[$j]['status'])
 				{
+					echo" we are in the if";
 					$full3[]=$full2[$j];
 				}
 			}
