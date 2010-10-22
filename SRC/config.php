@@ -11,4 +11,6 @@ mysql_select_db (DB_NAME) OR die ('Could not select the database: ' . mysql_erro
 
 $head = "";
 
+echo"<table width='100%'><tr><td><img src='banner.png'/></td></tr></table>";
+echo"<center>";
 ?>
